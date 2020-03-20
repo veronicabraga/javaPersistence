@@ -29,7 +29,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.academiadecodigo.bootcamp.App</mainClass>
+                            <mainClass>org.academiadecodigo.bootcamp.entity.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
