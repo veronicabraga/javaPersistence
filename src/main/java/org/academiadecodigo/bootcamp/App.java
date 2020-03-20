@@ -9,15 +9,18 @@ public class App {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenceExercise");
 
+        UserService userService = new UserService(emf);
+        User user = new User();
+        //EntityManager em = emf.createEntityManager();
 
-        EntityManager em = emf.createEntityManager();
+        user.setName("Veronica");
+        user.setEmail("vero@academia.com");
+
+        userService.createUser(user);
 
 
-        System.out.println("Result: " +
-                em.createNativeQuery("select 1 + 1").getSingleResult());
 
-
-        em.close();
+       // em.close();
 
 
         emf.close();
